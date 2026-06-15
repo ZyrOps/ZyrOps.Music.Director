@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" role="img" aria-label="Live Desk Notes podcast artwork">
+  <rect width="1200" height="675" fill="#050505"/>
+  <path d="M74 520 L360 145 L575 430 L700 280 L1080 520" fill="none" stroke="#FFD700" stroke-width="18" stroke-linejoin="round"/>
+  <circle cx="360" cy="145" r="40" fill="#FF2C55"/><circle cx="700" cy="280" r="40" fill="#FF2C55"/>
+  <text x="78" y="610" fill="#fff" font-family="Arial, sans-serif" font-size="82" font-weight="700">LIVE DESK NOTES</text>
+</svg>

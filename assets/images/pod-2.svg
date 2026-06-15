@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" role="img" aria-label="Breaking Into Music Direction podcast artwork">
+  <rect width="1200" height="675" fill="#000"/>
+  <path d="M0 520 C230 350 400 620 620 380 C790 196 980 360 1200 160 V675 H0 Z" fill="#FF2C55" opacity=".48"/>
+  <path d="M90 180 H1110 M90 250 H1110 M90 320 H1110 M90 390 H1110" stroke="#FFD700" stroke-opacity=".4" stroke-width="5"/>
+  <text x="82" y="545" fill="#fff" font-family="Arial, sans-serif" font-size="72" font-weight="700">MUSIC DIRECTION</text>
+  <text x="82" y="610" fill="#FFD700" font-family="Arial, sans-serif" font-size="34" letter-spacing="12">BREAKING IN</text>
+</svg>

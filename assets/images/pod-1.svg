@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" role="img" aria-label="The Art of Film Scoring podcast artwork">
+  <rect width="1200" height="675" fill="#000"/><rect x="44" y="44" width="1112" height="587" fill="#111" stroke="#FFD700" stroke-opacity=".55"/>
+  <circle cx="335" cy="338" r="168" fill="#FF2C55" opacity=".75"/><circle cx="335" cy="338" r="76" fill="#000"/>
+  <path d="M620 172 L846 338 L620 504 Z" fill="#FFD700"/>
+  <text x="84" y="110" fill="#fff" font-family="Arial, sans-serif" font-size="28" letter-spacing="10">PODCAST</text>
+  <text x="570" y="275" fill="#fff" font-family="Arial, sans-serif" font-size="78" font-weight="700">FILM</text><text x="570" y="360" fill="#FFD700" font-family="Arial, sans-serif" font-size="78" font-weight="700">SCORING</text>
+</svg>

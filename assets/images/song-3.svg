@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 900" role="img" aria-label="Monsoon Raga song artwork">
+  <defs><linearGradient id="g" x1="0" x2="1" y1="1" y2="0"><stop stop-color="#000"/><stop offset=".48" stop-color="#0A0A0A"/><stop offset="1" stop-color="#FFD700"/></linearGradient></defs>
+  <rect width="900" height="900" fill="url(#g)"/>
+  <g stroke="#FF2C55" stroke-width="10" stroke-linecap="round" opacity=".8">
+    <path d="M160 190 V610"/><path d="M230 130 V670"/><path d="M300 230 V720"/><path d="M370 160 V640"/><path d="M440 110 V700"/><path d="M510 230 V640"/><path d="M580 170 V730"/><path d="M650 240 V655"/><path d="M720 145 V700"/>
+  </g>
+  <text x="54" y="770" fill="#fff" font-family="Arial, sans-serif" font-size="88" font-weight="700">MONSOON</text><text x="54" y="848" fill="#FFD700" font-family="Arial, sans-serif" font-size="88" font-weight="700">RAGA</text>
+</svg>

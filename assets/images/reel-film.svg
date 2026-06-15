@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" role="img" aria-label="Film scoring reel panel">
+  <rect width="1600" height="900" fill="#000"/><circle cx="1130" cy="275" r="360" fill="#FFD700" opacity=".16"/><rect x="120" y="130" width="540" height="640" fill="#111" stroke="#fff" stroke-opacity=".14"/>
+  <g fill="#FF2C55" opacity=".8"><rect x="170" y="185" width="65" height="65"/><rect x="170" y="310" width="65" height="65"/><rect x="170" y="435" width="65" height="65"/><rect x="170" y="560" width="65" height="65"/></g>
+  <text x="760" y="475" fill="#fff" font-family="Arial, sans-serif" font-size="138" font-weight="700">FILM</text><text x="760" y="595" fill="#FFD700" font-family="Arial, sans-serif" font-size="138" font-weight="700">SCORING</text>
+</svg>

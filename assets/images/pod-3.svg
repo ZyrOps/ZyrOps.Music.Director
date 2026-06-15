@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" role="img" aria-label="Orchestration Room podcast artwork">
+  <rect width="1200" height="675" fill="#000"/><circle cx="940" cy="120" r="380" fill="#FFD700" opacity=".2"/>
+  <g stroke="#fff" stroke-width="10" stroke-linecap="round" opacity=".75"><path d="M110 380 H1000"/><path d="M160 300 H900"/><path d="M210 460 H940"/></g>
+  <g fill="#FF2C55"><rect x="230" y="190" width="44" height="290"/><rect x="330" y="230" width="44" height="250"/><rect x="430" y="150" width="44" height="330"/><rect x="530" y="255" width="44" height="225"/></g>
+  <text x="82" y="580" fill="#FFD700" font-family="Arial, sans-serif" font-size="74" font-weight="700">ORCHESTRATION ROOM</text>
+</svg>

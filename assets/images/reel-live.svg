@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" role="img" aria-label="Live direction reel panel">
+  <rect width="1600" height="900" fill="#000"/><path d="M0 820 C260 450 430 735 690 385 C910 90 1260 430 1600 105 V900 H0 Z" fill="#FF2C55" opacity=".32"/>
+  <g stroke="#FFD700" stroke-width="10" opacity=".9"><path d="M230 220 V700"/><path d="M330 310 V700"/><path d="M430 180 V700"/><path d="M530 370 V700"/></g>
+  <text x="720" y="500" fill="#fff" font-family="Arial, sans-serif" font-size="130" font-weight="700">LIVE</text><text x="720" y="620" fill="#FFD700" font-family="Arial, sans-serif" font-size="130" font-weight="700">DIRECTION</text>
+</svg>

@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 900" role="img" aria-label="Crimson Cue song artwork">
+  <rect width="900" height="900" fill="#000"/>
+  <polygon points="80,670 450,120 820,670" fill="#FF2C55" opacity=".82"/>
+  <polygon points="165,630 450,205 735,630" fill="#000" opacity=".72"/>
+  <path d="M188 410 H710 M230 492 H670 M280 574 H620" stroke="#FFD700" stroke-width="11" stroke-linecap="round"/>
+  <text x="56" y="770" fill="#fff" font-family="Arial, sans-serif" font-size="92" font-weight="700">CRIMSON</text><text x="56" y="850" fill="#FFD700" font-family="Arial, sans-serif" font-size="92" font-weight="700">CUE</text>
+</svg>

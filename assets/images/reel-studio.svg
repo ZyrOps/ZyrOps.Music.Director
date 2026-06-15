@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" role="img" aria-label="Studio sessions reel panel">
+  <rect width="1600" height="900" fill="#050505"/><circle cx="465" cy="455" r="280" fill="#111" stroke="#FFD700" stroke-opacity=".45" stroke-width="7"/><circle cx="465" cy="455" r="88" fill="#000" stroke="#fff" stroke-opacity=".25"/>
+  <path d="M790 250 H1430 M790 360 H1320 M790 470 H1410 M790 580 H1220" stroke="#FF2C55" stroke-width="14" stroke-linecap="round"/>
+  <text x="790" y="730" fill="#FFD700" font-family="Arial, sans-serif" font-size="120" font-weight="700">STUDIO SESSIONS</text>
+</svg>

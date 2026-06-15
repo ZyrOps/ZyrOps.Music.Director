@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 1200" role="img" aria-label="Cinematic portrait artwork for Arjun Nair">
+  <defs>
+    <linearGradient id="portraitBg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0%" stop-color="#0A0A0A"/>
+      <stop offset="46%" stop-color="#1A1A1A"/>
+      <stop offset="100%" stop-color="#000000"/>
+    </linearGradient>
+    <radialGradient id="halo" cx="53%" cy="28%" r="42%">
+      <stop offset="0%" stop-color="#FFD700" stop-opacity="0.42"/>
+      <stop offset="45%" stop-color="#FF2C55" stop-opacity="0.2"/>
+      <stop offset="100%" stop-color="#000000" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="portraitGlow" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="20" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  <rect width="960" height="1200" fill="url(#portraitBg)"/>
+  <rect width="960" height="1200" fill="url(#halo)"/>
+  <path d="M80 1110 L890 150" stroke="#FFD700" stroke-opacity="0.18" stroke-width="2"/>
+  <path d="M0 920 L960 680" stroke="#FF2C55" stroke-opacity="0.12" stroke-width="5"/>
+  <g transform="translate(0,38)">
+    <ellipse cx="488" cy="1044" rx="270" ry="70" fill="#000000" opacity="0.65"/>
+    <path d="M310 940 C320 786 356 682 430 630 L532 630 C614 692 653 804 666 940 Z" fill="#070707" stroke="#FFD700" stroke-opacity="0.45" stroke-width="3"/>
+    <path d="M372 618 C390 538 430 485 492 485 C555 485 598 539 614 620 C568 650 427 650 372 618 Z" fill="#101010" stroke="#ffffff" stroke-opacity="0.17" stroke-width="2"/>
+    <circle cx="493" cy="365" r="134" fill="#121212" stroke="#FFD700" stroke-opacity="0.5" stroke-width="3"/>
+    <path d="M355 345 C390 246 548 202 636 324 C605 288 563 282 522 300 C459 327 420 321 355 345 Z" fill="#000000"/>
+    <path d="M332 392 C394 492 553 516 648 392" fill="none" stroke="#FF2C55" stroke-opacity="0.34" stroke-width="8" filter="url(#portraitGlow)"/>
+    <path d="M245 1012 C330 876 455 836 518 736 C568 850 665 892 742 1012" fill="none" stroke="#FFD700" stroke-opacity="0.45" stroke-width="6"/>
+  </g>
+  <text x="64" y="92" fill="#ffffff" fill-opacity="0.78" font-family="Arial, sans-serif" font-size="28" letter-spacing="12">MUSIC DIRECTOR</text>
+  <text x="64" y="1146" fill="#FFD700" font-family="Arial, sans-serif" font-size="72" font-weight="700" letter-spacing="8">ARJUN NAIR</text>
+</svg>

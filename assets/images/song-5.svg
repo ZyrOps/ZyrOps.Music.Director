@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 900" role="img" aria-label="Studio Rain song artwork">
+  <defs><radialGradient id="g" cx="50%" cy="50%" r="60%"><stop stop-color="#242424"/><stop offset=".7" stop-color="#070707"/><stop offset="1" stop-color="#000"/></radialGradient></defs>
+  <rect width="900" height="900" fill="url(#g)"/>
+  <path d="M105 312 C205 196 325 416 444 312 C560 210 660 410 800 286" fill="none" stroke="#FFD700" stroke-width="18" stroke-linecap="round"/>
+  <path d="M105 512 C225 392 342 625 466 510 C592 396 688 620 798 494" fill="none" stroke="#FF2C55" stroke-width="18" stroke-linecap="round"/>
+  <text x="58" y="770" fill="#fff" font-family="Arial, sans-serif" font-size="92" font-weight="700">STUDIO</text><text x="58" y="850" fill="#FFD700" font-family="Arial, sans-serif" font-size="92" font-weight="700">RAIN</text>
+</svg>
