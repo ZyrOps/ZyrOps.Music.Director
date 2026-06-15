@@ -36,6 +36,7 @@ export function DiscDetailStage({ mode, items, defaultDiscImage }: DiscDetailSta
   const [likedIds, setLikedIds] = useState<number[]>([]);
   const [artworkIds, setArtworkIds] = useState<number[]>(() => (items[0] ? [items[0].id] : []));
   const [queueOpen, setQueueOpen] = useState(false);
+  const [isMobileViewport, setIsMobileViewport] = useState(false);
   const currentSong = useMusicStore((state) => state.currentSong);
   const isPlaying = useMusicStore((state) => state.isPlaying);
   const startSong = useMusicStore((state) => state.startSong);
@@ -78,6 +79,16 @@ export function DiscDetailStage({ mode, items, defaultDiscImage }: DiscDetailSta
     startSong(firstItem);
   }, [items, startSong]);
 
+  useEffect(() => {
+    const mediaQuery = window.matchMedia('(max-width: 760px)');
+    const syncViewport = () => setIsMobileViewport(mediaQuery.matches);
+
+    syncViewport();
+    mediaQuery.addEventListener('change', syncViewport);
+
+    return () => mediaQuery.removeEventListener('change', syncViewport);
+  }, []);
+
   const playSelected = () => {
     if (currentSong?.id === selected.id) {
       markArtworkPlayed(selected.id);
@@ -109,20 +120,32 @@ export function DiscDetailStage({ mode, items, defaultDiscImage }: DiscDetailSta
     }
   }, [currentItemIndex, isPlaying, items, markArtworkPlayed, selectedIndex, startSong]);
 
-  const showPrevious = useCallback(() => {
+  const showPrevious = useCallback((autoplay = false) => {
     if (!items.length) return;
     const baseIndex = isPlaying && currentItemIndex >= 0 ? currentItemIndex : selectedIndex;
     const previousIndex = Math.max(baseIndex - 1, 0);
+    const previousItem = items[previousIndex];
     setSelectedIndex(previousIndex);
-  }, [currentItemIndex, isPlaying, items.length, selectedIndex]);
+    if (autoplay && previousItem) {
+      markArtworkPlayed(previousItem.id);
+      startSong(previousItem);
+    }
+  }, [currentItemIndex, isPlaying, items, markArtworkPlayed, selectedIndex, startSong]);
 
   const handleDragEnd = (_: MouseEvent | TouchEvent | PointerEvent, info: PanInfo) => {
-    if (info.offset.x < -90 || info.velocity.x < -520) {
-      showNext();
+    if (queueOpen) return;
+
+    const swipeDistance = isMobileViewport ? 44 : 90;
+    const swipeVelocity = isMobileViewport ? 360 : 520;
+    const shouldAutoplaySwipe = isMobileViewport && Boolean(currentSong && isPlaying);
+
+    if (info.offset.x < -swipeDistance || info.velocity.x < -swipeVelocity) {
+      showNext(shouldAutoplaySwipe);
+      return;
     }
 
-    if (info.offset.x > 90 || info.velocity.x > 520) {
-      showPrevious();
+    if (info.offset.x > swipeDistance || info.velocity.x > swipeVelocity) {
+      showPrevious(shouldAutoplaySwipe);
     }
   };
 
@@ -260,7 +283,10 @@ export function DiscDetailStage({ mode, items, defaultDiscImage }: DiscDetailSta
             drag="x"
             dragConstraints={{ left: 0, right: 0 }}
             dragElastic={0.13}
+            dragDirectionLock
+            dragMomentum={false}
             onDragEnd={handleDragEnd}
+            style={{ touchAction: 'pan-y' }}
           >
             {carouselItems.map(({ item, index, offset }) => {
               const selectedSlot = item.id === selected.id;
