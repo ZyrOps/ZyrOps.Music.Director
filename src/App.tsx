@@ -12,7 +12,6 @@ const ContactPage = lazy(() => import('./pages/ContactPage'));
 const LatestMusicPage = lazy(() => import('./pages/LatestMusicPage'));
 const LatestPodcastPage = lazy(() => import('./pages/LatestPodcastPage'));
 const WatchPage = lazy(() => import('./pages/WatchPage'));
-const CreditsPage = lazy(() => import('./pages/CreditsPage'));
 const StatsPage = lazy(() => import('./pages/StatsPage'));
 const PrivacyPage = lazy(() => import('./pages/PrivacyPage'));
 
@@ -39,8 +38,6 @@ export default function App() {
             <Route path="/about" element={<AboutPage />} />
             <Route path="/contact" element={<ContactPage />} />
             <Route path="/watch" element={<WatchPage />} />
-            <Route path="/credits" element={<CreditsPage />} />
-            <Route path="/who-made-this" element={<CreditsPage />} />
             <Route path="/stats" element={<StatsPage />} />
             <Route path="/privacy" element={<PrivacyPage />} />
           </Route>
