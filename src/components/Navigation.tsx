@@ -2,7 +2,8 @@ import { AnimatePresence, motion } from 'framer-motion';
 import { Airplay, Pause, Play, SkipBack, SkipForward, SlidersHorizontal, Volume2 } from 'lucide-react';
 import type { CSSProperties } from 'react';
 import { NavLink } from 'react-router-dom';
-import { songs } from '../data/content';
+import { podcasts, songs } from '../data/content';
+import { getTrackGradientTheme } from '../data/trackThemes';
 import { useMusicStore } from '../store/useMusicStore';
 
 const navItems = [
@@ -12,15 +13,6 @@ const navItems = [
   { label: 'Library', to: '/songs' },
   { label: 'About', to: '/about' },
   { label: 'Stats', to: '/stats' },
-];
-
-const dancePalettes = [
-  ['rgba(255, 226, 170, 0.52)', 'rgba(240, 166, 79, 0.5)', 'rgba(185, 107, 34, 0.36)'],
-  ['rgba(255, 152, 91, 0.48)', 'rgba(255, 203, 126, 0.42)', 'rgba(104, 168, 255, 0.24)'],
-  ['rgba(255, 110, 180, 0.42)', 'rgba(240, 166, 79, 0.42)', 'rgba(255, 226, 170, 0.26)'],
-  ['rgba(117, 213, 255, 0.32)', 'rgba(255, 185, 94, 0.48)', 'rgba(185, 107, 34, 0.28)'],
-  ['rgba(211, 139, 255, 0.36)', 'rgba(255, 181, 109, 0.44)', 'rgba(255, 226, 170, 0.24)'],
-  ['rgba(255, 206, 119, 0.46)', 'rgba(255, 121, 91, 0.36)', 'rgba(125, 186, 255, 0.22)'],
 ];
 
 export function Navigation() {
@@ -40,7 +32,9 @@ export function Navigation() {
     0,
     songs.findIndex((song) => song.id === islandSong.id),
   );
-  const dancePalette = dancePalettes[currentIndex % dancePalettes.length];
+  const currentPodcastIndex = podcasts.findIndex((podcast) => 1000 + podcast.episode === islandSong.id);
+  const themeIndex = currentPodcastIndex >= 0 ? songs.length + currentPodcastIndex : currentIndex;
+  const dancePalette = getTrackGradientTheme(themeIndex);
   const danceIntensity = isPlaying ? Math.min(1, 0.38 + volume * 0.48 + progress * 0.14) : 0;
   const islandStyle = {
     '--dance-intensity': danceIntensity.toFixed(2),
