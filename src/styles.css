@@ -2522,20 +2522,54 @@ footer a[class*='border']:hover,
   }
 
   .mayes-choice-section .retro-choice-panel {
-    min-height: 270px !important;
+    min-height: 230px !important;
   }
 
   .mayes-choice-section .retro-panel-screen {
-    min-height: 248px !important;
+    min-height: 210px !important;
+    padding: 0.82rem !important;
+  }
+
+  .mayes-choice-section {
+    justify-items: center;
+    padding: 3.1rem 0.85rem 5rem;
+    text-align: center;
+  }
+
+  .mayes-choice-copy {
+    width: min(100%, 330px);
+    margin-inline: auto;
+  }
+
+  .mayes-choice-copy h2 {
+    max-width: 100%;
+    font-size: clamp(2.5rem, 14vw, 3.3rem);
+    line-height: 0.9;
+    overflow-wrap: anywhere;
+    text-wrap: balance;
+  }
+
+  .mayes-choice-copy p:not(.mayes-eyebrow) {
+    max-width: 310px;
+    margin: 1rem auto 0;
+    font-size: 0.78rem;
+    line-height: 1.45;
+  }
+
+  .mayes-choice-grid {
+    width: min(100%, 318px);
+    gap: 0.8rem;
   }
 
   .mayes-choice-title {
-    font-size: clamp(2rem, 15vw, 3.25rem);
+    font-size: clamp(1.9rem, 13vw, 2.85rem);
+    line-height: 0.88;
+    white-space: normal;
   }
 
   .mayes-choice-section .retro-orbit {
-    width: 5.4rem;
-    height: 5.4rem;
+    width: 4.75rem;
+    height: 4.75rem;
   }
 }
 
@@ -3776,5 +3810,212 @@ footer a[class*='border']:hover,
 
   .neo-queue-now {
     padding-right: 2.7rem !important;
+  }
+}
+
+/* Mobile latest-player parity pass: keep the desktop elements visible and centered. */
+@media (max-width: 760px) {
+  .neo-detail-stage {
+    height: auto !important;
+    min-height: 100svh !important;
+    overflow-x: hidden !important;
+    overflow-y: auto !important;
+    padding: 0.8rem 0.75rem 8.8rem !important;
+  }
+
+  .neo-detail-core {
+    min-height: calc(100svh - 8.9rem) !important;
+    max-width: 100% !important;
+    justify-content: center !important;
+    padding-top: 2.35rem !important;
+  }
+
+  .neo-detail-heading {
+    max-width: min(340px, calc(100vw - 1.5rem)) !important;
+    overflow: visible !important;
+  }
+
+  .neo-latest-header {
+    min-height: 23px !important;
+    margin-bottom: 0.55rem !important;
+    padding: 0.32rem 0.68rem !important;
+    font-size: 0.55rem !important;
+  }
+
+  .neo-detail-heading p,
+  .neo-detail-heading h1 {
+    max-width: min(318px, calc(100vw - 2rem)) !important;
+    margin-inline: auto !important;
+    font-size: clamp(0.82rem, 3.7vw, 1rem) !important;
+    line-height: 1.08 !important;
+    white-space: normal !important;
+    overflow-wrap: anywhere !important;
+    text-wrap: balance;
+  }
+
+  .neo-detail-stage-podcast .neo-detail-heading p {
+    max-width: min(286px, calc(100vw - 2.8rem)) !important;
+    font-size: clamp(0.76rem, 3.35vw, 0.9rem) !important;
+  }
+
+  .neo-detail-heading div:not(.neo-latest-header) {
+    margin-top: 0.55rem !important;
+    gap: 0.48rem !important;
+  }
+
+  .neo-disc-window {
+    width: 100vw !important;
+    min-height: clamp(188px, 50svh, 226px) !important;
+    margin-top: clamp(0.9rem, 2.6svh, 1.35rem) !important;
+    overflow: visible !important;
+  }
+
+  .neo-disc-belt {
+    height: clamp(188px, 50svh, 226px) !important;
+    touch-action: pan-y !important;
+    cursor: grab;
+  }
+
+  .neo-disc-belt:active {
+    cursor: grabbing;
+  }
+
+  .neo-detail-stage .song-disc-hero {
+    width: clamp(184px, 56vw, 218px) !important;
+    height: clamp(184px, 56vw, 218px) !important;
+  }
+
+  .neo-disc-slot::before {
+    inset: -14% !important;
+    filter: blur(20px) saturate(1.35) !important;
+  }
+
+  .neo-player-controls {
+    margin-top: clamp(0.7rem, 2.2svh, 1.05rem) !important;
+    gap: 0.55rem !important;
+  }
+
+  .neo-player-button {
+    width: 46px !important;
+    height: 42px !important;
+  }
+
+  .neo-detail-bottom {
+    right: 0.7rem !important;
+    bottom: 4.38rem !important;
+    left: 0.7rem !important;
+    display: grid !important;
+    grid-template-columns: minmax(0, 0.78fr) minmax(0, 1.22fr) !important;
+    align-items: stretch !important;
+    gap: 0.5rem !important;
+    pointer-events: none !important;
+  }
+
+  .neo-detail-defy {
+    display: inline-flex !important;
+    width: 100% !important;
+    height: 54px !important;
+    min-width: 0 !important;
+    justify-content: center !important;
+    gap: 0.42rem !important;
+    overflow: hidden !important;
+    padding-inline: 0.55rem !important;
+    font-size: 0.56rem !important;
+    line-height: 1 !important;
+    text-align: center !important;
+    white-space: normal !important;
+    pointer-events: auto !important;
+  }
+
+  .neo-detail-defy svg {
+    width: 15px !important;
+    height: 15px !important;
+    flex: 0 0 auto !important;
+  }
+
+  .neo-detail-bottom .neo-likes-card {
+    display: flex !important;
+    flex-direction: column !important;
+    width: 100% !important;
+    height: 54px !important;
+    min-width: 0 !important;
+    justify-self: stretch !important;
+    --tw-rotate: 0deg !important;
+    transform: none !important;
+    rotate: 0deg !important;
+    overflow: hidden !important;
+    pointer-events: auto !important;
+  }
+
+  .neo-detail-bottom .neo-likes-card > div:first-child {
+    height: 24px !important;
+    min-height: 24px !important;
+    padding-inline: 0.5rem !important;
+    font-size: 0.58rem !important;
+    letter-spacing: 0 !important;
+    line-height: 1 !important;
+    white-space: nowrap !important;
+  }
+
+  .neo-detail-bottom .neo-likes-card > div:last-child {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    padding: 0.22rem 0.44rem !important;
+    font-size: 0.38rem !important;
+    line-height: 1.05 !important;
+    text-align: center !important;
+    white-space: normal !important;
+    overflow-wrap: normal !important;
+  }
+
+  .neo-detail-library {
+    bottom: 0.72rem !important;
+  }
+}
+
+@media (max-width: 760px) and (max-height: 720px) {
+  .neo-detail-stage {
+    padding-top: 0.48rem !important;
+    padding-bottom: 7.65rem !important;
+  }
+
+  .neo-detail-core {
+    min-height: calc(100svh - 7.6rem) !important;
+    padding-top: 1.9rem !important;
+  }
+
+  .neo-detail-heading div:not(.neo-latest-header) {
+    margin-top: 0.38rem !important;
+  }
+
+  .neo-disc-window,
+  .neo-disc-belt {
+    min-height: 172px !important;
+    height: 172px !important;
+  }
+
+  .neo-detail-stage .song-disc-hero {
+    width: clamp(160px, 50vw, 188px) !important;
+    height: clamp(160px, 50vw, 188px) !important;
+  }
+
+  .neo-player-controls {
+    margin-top: 0.46rem !important;
+  }
+
+  .neo-detail-bottom {
+    bottom: 3.92rem !important;
+  }
+
+  .neo-detail-defy,
+  .neo-likes-card {
+    height: 46px !important;
+  }
+
+  .neo-likes-card > div:first-child {
+    height: 21px !important;
+    min-height: 21px !important;
+    font-size: 0.66rem !important;
   }
 }

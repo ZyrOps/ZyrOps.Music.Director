@@ -4,6 +4,7 @@ dist
 .env.*
 *.local
 *.log
+*.err
 coverage
 screenshots
 qa-screenshots

@@ -44,6 +44,7 @@ export function DiscDetailStage({ mode, items, defaultDiscImage }: DiscDetailSta
   const playingSelected = currentSong?.id === selected.id && isPlaying;
   const selectedLiked = likedIds.includes(selected.id);
   const isPodcast = mode === 'podcast';
+  const discStep = isMobileViewport ? 190 : 326;
   const waveBars = useMemo(() => Array.from({ length: 52 }, (_, index) => 16 + ((index * 13) % 46)), []);
 
   const visibleArtworkIds = useMemo(() => {
@@ -290,7 +291,7 @@ export function DiscDetailStage({ mode, items, defaultDiscImage }: DiscDetailSta
               const slotStyle = {
                 zIndex: 20 - distance,
                 opacity: distance > 3 ? 0 : selectedSlot || playedSlot ? 1 : 0.66,
-                transform: `translateX(${offset * 326}px)`,
+                transform: `translateX(${offset * discStep}px)`,
                 '--disc-glow-a': glowTheme[0],
                 '--disc-glow-b': glowTheme[1],
                 '--disc-glow-c': glowTheme[2],
